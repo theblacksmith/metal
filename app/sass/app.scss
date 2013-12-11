@@ -1,0 +1,72 @@
+@import "bootstrap/bootstrap";
+@import "bootstrap/responsive";
+@import "semantic-grid/grid";
+
+@import "lib/bootstrap-semantic-grid";
+@import "lib/select2-custom";
+
+// Widgets
+@import "widgets/language-selector";
+
+// Compass
+@import "compass/utilities/general/clearfix";
+
+@import url("http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&subset=latin,cyrillic-ext,latin-ext");
+
+@include setGridSize("fluid");
+
+.page {
+}
+
+.view {
+	width: 960px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+/*
+.container-fluid {
+	@include column(12);
+	@include box-sizing(border-box);
+}
+
+#container-inner {
+	@include row(12);
+	@include box-sizing(border-box);
+}
+*/
+
+#sidebar-left {
+	@include column(1);
+	margin-right: -2px;
+	@include box-sizing(border-box);
+}
+
+/*
+
+$footerHeight: 40px;
+$footerTopMargin: 40px;
+@import "lib/sticky-footer";
+
+#wrap {
+  @include footer-pusher;
+}
+
+.push-footer-after-content {
+  @include clearfix();
+  height: $navbarHeight;
+}
+*/
+#content-wrap {
+	@include col(11);
+	margin-left: 0;
+	@include box-sizing(border-box);
+}
+
+footer {
+  //@extend .sticky-footer;
+	margin: 20px -38px 0;
+}
+
+ul {
+	list-style: none;
+}

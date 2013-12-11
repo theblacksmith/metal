@@ -1,0 +1,427 @@
+@import "semantic-grid/grid";
+@import "bootstrap/mixins";
+@import url("/css/acme/bootstrap.min.css");
+@import url("/css/acme/bootstrap-responsive.min.css");
+@import url("/css/acme/style.css");
+@import "/css/acme/style-responsive.css";
+@import "/css/sale/style.css";
+@import "/css/components/models/relationship.css";
+
+@import "http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&subset=latin,cyrillic-ext,latin-ext";
+@import "lib/semantic-grid";
+@import "lib/bootstrap.semantic-grid";
+
+.page {
+}
+
+.view {
+	width: 960px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+
+body.Login {
+	background-image: url("/img/bg-login-green-flare.jpg");
+}
+
+.container-fluid {
+	@include column(12);
+	@include box-sizing(border-box);
+}
+
+#container-inner {
+	@include row(12);
+	@include box-sizing(border-box);
+}
+
+#sidebar-left {
+	@include column(1);
+	margin-right: -2px;
+	@include box-sizing(border-box);
+}
+
+#content {
+	@include column(11.3);
+	margin-left: 0;
+	@include box-sizing(border-box);
+}
+
+footer {
+	margin: 20px -38px 0;
+}
+
+ul {
+	list-style: none;
+}
+
+.language-selector-box a {
+	text-shadow: 0 0px 0px #0b090a !important
+}
+
+#Login.view {
+
+	margin-top: 50px;
+
+	hgroup {
+		margin-top: 30px;
+	}
+
+	section {
+		@include column(12);
+		@include box-sizing(border-box);
+		border-radius: 10px;
+		background-color: #444;
+		border: 3px solid #333333;
+		background-image: url('/img/login_photo.jpg');
+		background-repeat: no-repeat;
+		padding-left: 450px;
+		height: 500px;
+		color: #fff;
+	}
+
+	form {
+		margin: 20px;
+	}
+
+	label.placeholder {
+		background: none repeat scroll 0 0 #F5F5F5;
+		border-radius: 4px 0 0 4px;
+		color: #BBBBC0;
+		font-size: 18px;
+		height: 43px;
+		left: 1px;
+		line-height: 40px;
+		padding-right: 7px;
+		position: relative;
+		text-align: right;
+		top: 49px;
+		width: 90px;
+		z-index: 5;
+	}
+
+	input[type=text], input[type=password] {
+		font-size: 30px;
+		height: 38px;
+		padding: 0 0 5px 105px;
+		width: 250px;
+	}
+
+	input[type=submit] {
+		float: right;
+		margin: 60px 85px 0 0;
+		padding: 15px 50px;
+	}
+}
+
+//
+// PersonForm
+//
+
+#PersonForm,#EmployeeForm
+{
+	.user-photo
+	{
+		text-align: center;
+		img {
+			width: 120px;
+		}
+	}
+
+	#person-type {
+		position: absolute;
+		right: 10px;
+	}
+
+	.control-label-inline {
+		margin: 0 15px 0 30px;
+	}
+
+	ul li:first-child .separator {
+		display: none;
+	}
+
+	#StateRegistrationCG {
+		margin-left: -20px;
+	}
+}
+
+.control-group li{
+	list-style: none;
+	margin-bottom:10px;
+	input{
+		margin-right: 10px;
+	}
+}
+
+
+.list-address li{
+		margin-bottom:30px;
+		height: 160px;
+	}
+.list-more-information {
+	list-style: none;
+
+}
+
+.list-more-information li{
+	margin-bottom:30px;
+
+}
+
+.separator {
+	display: block;
+    border-top: 1px solid #E5E5E5;
+    margin: 20px 0 20px 20px;
+}
+.btn-mini{
+	margin-left:10px;
+}
+
+//
+// PersonList
+//
+
+#persons-widgets {
+	.box-content{
+		z-index: 0;
+	}
+
+	ul.persons-list {
+		@include clearfix;
+	}
+
+	.person-widget {
+
+		@include column(4);
+
+		@media(max-width: 767px) {
+			@include column(6);
+		}
+
+		@media(max-width: 500px) {
+			@include column(12);
+		}
+
+		min-height: 100px;
+		border: 0;
+
+		.link-avatar {
+			float:left;
+			height: 90px;
+		}
+
+		.info {
+			display: block;
+			margin-left: 60px;
+
+			&.city, &.state, &.phone {
+				display: inline-block;
+				margin: 0;
+			}
+
+			&.phone {
+				margin-right:10px;
+			}
+		}
+	}
+
+	.pagination {
+		@include clearfix;
+		margin-top: 20px;
+	}
+
+}
+
+.form-search{
+	float:left;
+	display:inline;
+	margin-left:40px;
+	input[type=text] {
+		width: 250px;
+	}
+}
+
+.grid-hidden{
+	visibility:hidden;
+}
+
+.control-hidden{
+	display:none !important;
+
+}
+#btn-add-email{
+    margin: 0px 0px 10px 5px;
+}
+#btn-add-address{
+    margin: 0px 0px 10px 5px;
+}
+
+//
+// Person and Employee Details
+//
+
+.person-details, .employee-details {
+	height: 10px;
+	h1.bold-title {
+		font-weight: bold;
+	}
+
+	.span-right{
+		text-align: right;
+		font-weight: bold;
+		padding-right: 5px;
+		margin-bottom: 0px;
+		margin-top: 0px;
+		min-height: 0px !important;
+	}
+	.border-bottom{
+		border-bottom-width: 1px;
+		border-bottom-style: solid;
+		border-bottom-color: #E5E5E5;
+
+	}
+	.border-right{
+		border-right-width: 1px;
+		border-right-style: solid;
+		border-right-color: #E5E5E5;
+	}
+
+	.details-span {
+		padding-bottom: 10px;
+	}
+
+	.details-span div {
+		max-width: 50% !important;
+		float: left !important;
+	}
+
+	img{
+		width: 120px;
+		height: 120px;
+	}
+	.row-image{
+		height: 120px;
+		span{
+			height: 120px;
+		}
+	}
+	.row-height-one {
+		height: 30px;
+		.span-right{
+			height: 30px;
+		}
+	}
+	.row-height-two {
+		height: 50px;
+		.span-right{
+			height: 50px;
+		}
+
+	}
+	.row-height-three {
+		height: 65px;
+		.span-right{
+			height: 65px;
+		}
+
+	}
+	.span-description{
+			width: 100px;
+		}
+	.box-email{
+		.separator{
+			border: none;
+		}
+	}
+
+	.box-address{
+		.control-label{
+			display: block;
+		}
+		.separator{
+			border: none;
+		}
+		.span-address {
+			height: 90px !important;
+		}
+		.span-type {
+			height: 100% !important;
+		}
+	}
+
+	.box-phone{
+		.separator{
+			border: none;
+
+		}
+		.row-more-phone{
+		height: 60px;
+			.span-right{
+
+				height: 60px;
+			}
+		}
+	}
+
+	.separator-more-phone{
+
+		border: none;
+		height: 10px;
+	}
+
+	.box-group{
+		.separator{
+			border: none;
+		}
+
+	}
+
+
+	//
+	// Relationship
+	//
+
+	.box-relationship{
+		.separator{
+			height: 10px;
+		}
+		input{
+			margin-right: 30px;
+		}
+	}
+
+	.group-members{
+		margin-left: 30px;
+		margin-bottom:30px;
+		width:95%;
+		height:30px;
+	}
+
+	.group-holding{
+		margin-bottom: 30px;
+		margin-top:60px;
+		width:97%;
+		height: 30px;
+
+	}
+
+
+}
+
+/**
+ * Applying Bootstrap style to MVC validation
+
+
+.validation-summary-errors
+{
+    @extend .alert;
+    @extend .alert-error;
+}
+
+.field-validation-error
+{
+	@extend .label;
+	@extend .label-important;
+}
+
+ */

@@ -1,0 +1,14 @@
+{
+  "name": "Sparrow.Web.UI",
+  "version": "0.0.1",
+  "devDependencies": {
+    "angular": "~1.2.0",
+    "angular-mocks": "~1.2.0",
+    "angular-ui-router": "~0.2.0",
+    "angular-bootstrap": "~0.6.0",
+    "sass-bootstrap": "~3.0.0",
+    "angular-ui-utils": "~0.0.4",
+    "jquery": "~2.0.3"
+  },
+  "dependencies": {}
+}

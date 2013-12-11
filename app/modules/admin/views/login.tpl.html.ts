@@ -1,0 +1,1 @@
+module login.tpl { export var html =  '' } 

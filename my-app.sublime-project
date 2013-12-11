@@ -1,0 +1,13 @@
+{
+	"folders":
+	[
+		{
+			"path": "/projects/Jack/Sparrow/source/Web.UI",
+			"folder_exclude_patterns": [ "bin", "obj", "node_modules", ".*", "obj" ]
+		}
+	],
+	"settings": {
+		"tab_size": 4,
+		"translate_tabs_to_spaces": true
+	}
+}

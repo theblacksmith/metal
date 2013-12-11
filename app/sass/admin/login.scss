@@ -1,0 +1,68 @@
+@import "semantic-grid/stylesheets/scss/grid";
+@import "lib/bootstrap-semantic-grid";
+@import "compass/css3";
+
+@include setGridSize("fluid");
+
+#sidebar-left {
+  display: none;
+}
+
+#content-wrap {
+  @include col(4);
+  @include push(4);
+}
+
+#loginForm {
+  height: 300px;
+  padding: 30px;
+	background-color: #fff;
+
+  h1 {
+    margin: 0;
+  }
+
+  ul {
+    @include box-sizing(border-box);
+    list-style: none;
+    margin: auto;
+    padding: 0;
+    width: 100%;
+
+    li {
+      @include box-sizing(border-box);
+      line-height: 20px;
+      width: 100%;
+      margin: 40px auto -10px;
+      padding: 0;
+    }
+
+    li:last-child {
+      text-align: right;
+    }
+  }
+
+	.add-on {
+    @include box-sizing(border-box);
+		color: #BBBBC0;
+		font-size: 16px;
+		height: 40px;
+		line-height: 28px;
+		padding-right: 5px;
+		text-align: right;
+		width: 95px;
+	}
+
+	input[type=text], input[type=password] {
+    @include box-sizing(border-box);
+		font-size: 16px;
+    height: 40px;
+    padding-left: 10px;
+    width: 235px;
+	}
+
+	input[type=submit] {
+		padding-left: 30px;
+		padding-right: 30px;
+	}
+}
